@@ -12,12 +12,17 @@ const navItems: NavItem[] = [
   { label: 'About Me', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Hide n SEE', href: '#hide-see', isSpecial: true },
-  { label: 'Achievment', href: '#achievements' }, // Menggunakan id #achievements
+  { label: 'Achievment', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('#home');
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleNavClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -25,6 +30,7 @@ export const Navbar: React.FC = () => {
   ) => {
     event.preventDefault();
     setActiveSection(href);
+    setIsOpen(false); // Otomatis tutup menu HP saat salah satu item diklik
 
     const target = document.querySelector(href);
 
@@ -52,7 +58,18 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <div className="navbar-center-pill">
+      {/* Hamburger Button untuk Tampilan HP */}
+      <button 
+        className={`receipt-hamburger ${isOpen ? 'active' : ''}`} 
+        onClick={toggleMenu}
+        aria-label="Toggle Menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div className={`navbar-center-pill ${isOpen ? 'open' : ''}`}>
         {navItems.map((item) => {
           const isActive = activeSection === item.href;
 
