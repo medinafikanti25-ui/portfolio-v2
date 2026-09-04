@@ -26,7 +26,7 @@ const itemsData: Item[] = [
     publisherOrOrg: 'DJKI Kementerian Hukum RI',
     description: 'Pencatatan resmi Hak Cipta Perangkat Lunak (Program Komputer) oleh Direktorat Jenderal Kekayaan Intelektual.',
     dateOrYear: 'Juni 2026',
-    link: '#', // Isi path/URL sertifikat jika ada
+    link: '/sertifikat-djki.pdf', // File disimpan di folder public/sertifikat-djki.pdf
   },
 
   /* --- JURNAL ILMIAH --- */
@@ -109,7 +109,7 @@ export const Achievements: React.FC = () => {
   });
 
   return (
-    <div className="achievements-wrapper">
+    <div className="achievements-wrapper" id="achievements">
       <div className="receipt-container">
         {/* Header Struk */}
         <div className="receipt-top-info">
