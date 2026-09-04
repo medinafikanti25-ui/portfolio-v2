@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Space+Mono:wght@400;700&display=swap');
 
+/* Mengatur jarak agar judul section tidak tertutup oleh navbar fixed */
+#hide-see,
 .hidesee-wrapper {
+  scroll-margin-top: 100px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -75,6 +78,8 @@
 .category-tabs {
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tab-btn {
@@ -292,4 +297,60 @@
 
 .btn-code:hover {
   background: #e4e4e7;
+}
+
+/* =========================================
+   RESPONSIVE STYLING UNTUK LAYAR HP
+   ========================================= */
+@media (max-width: 768px) {
+  #hide-see,
+  .hidesee-wrapper {
+    scroll-margin-top: 110px;
+    padding: 20px 12px;
+  }
+
+  .receipt-header-banner {
+    margin-bottom: 28px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .receipt-header-content {
+    padding: 20px 16px 16px 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 10px;
+  }
+
+  /* Ubah grid ke 1 kolom penuh di layar HP */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-slip-card {
+    padding: 20px 16px 16px 16px;
+  }
+
+  .slip-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .action-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .btn-view,
+  .btn-code {
+    text-align: center;
+    font-size: 10px;
+    padding: 8px 12px;
+  }
 }
