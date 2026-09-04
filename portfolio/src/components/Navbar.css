@@ -1,0 +1,137 @@
+.stitch-navbar {
+  /* Penambahan properti sticky/fixed */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 20px auto;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* Left Logo Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-badge {
+  width: 32px;
+  height: 32px;
+  background: #6b21a8;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e1b4b;
+}
+
+.logo-sub {
+  font-size: 10px;
+  font-weight: 600;
+  color: #7c3aed;
+  letter-spacing: 0.5px;
+}
+
+/* Center Pill Nav Links */
+.navbar-center-pill {
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 30px;
+  display: flex;
+  gap: 4px;
+}
+
+.stitch-nav-link {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.stitch-nav-link:hover {
+  color: #6b21a8;
+}
+
+.stitch-nav-link.active {
+  background: #6b21a8;
+  color: white;
+  font-weight: 600;
+}
+
+/* Special Hide n SEE styling inside active/inactive states */
+.hide-see-link .see-text {
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+.stitch-nav-link.active.hide-see-link .see-text {
+  color: #f472b6; /* Warna pink manis saat button aktif ungu */
+}
+
+/* Right CTA Section */
+.navbar-right-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-badge {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.get-in-touch-btn {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  padding: 6px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.get-in-touch-btn:hover {
+  background: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  .navbar-right-cta {
+    display: none;
+  }
+}

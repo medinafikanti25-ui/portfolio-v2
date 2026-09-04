@@ -1,0 +1,63 @@
+.section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 40px 60px;
+
+  text-align: center;
+
+  /* Buat background section transparan agar pola dot grid terliat */
+  background: transparent !important;
+}
+
+.section > div {
+  max-width: 800px;
+}
+
+.section h1 {
+  margin: 10px 0;
+
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #94a3b8; /* Diubah ke warna terang agar terbaca di background gelap */
+}
+
+.section-label {
+  font-size: 13px !important;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #a855f7 !important;
+}
+
+/* Home, About, Hidden, Contact dijadikan transparan */
+.home-section,
+.about-section,
+.hidden-section,
+.contact-section {
+  background: transparent !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: 100px 20px 50px;
+  }
+
+  .section h1 {
+    font-size: 42px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+}

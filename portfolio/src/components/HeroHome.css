@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+.hero-receipt-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  /* Tambahkan margin-top agar bergeser ke bawah menuruti posisi navbar fixed */
+  margin: 60px auto 40px auto;
+  position: relative;
+}
+
+/* Mesin / Slot Printer (Ungu Tua / Abu) */
+.printer-machine {
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(180deg, #3b0764 0%, #1e1b4b 100%);
+  border: 1px solid #6b21a8;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 3;
+}
+
+/* Lubang Slot Keluar Struk */
+.printer-slot {
+  width: 90%;
+  height: 24px;
+  background: #09090b;
+  border-radius: 12px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Kertas Struk */
+.receipt-paper {
+  width: 82%;
+  background: #fefefe;
+  color: #18181b;
+  padding: 24px 28px;
+  margin-top: -12px; /* Kertas seolah keluar dari balik slot */
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  font-family: 'Space Mono', monospace; /* Font struk kasir */
+  border-radius: 0 0 4px 4px;
+  animation: slideDown 1s ease-out forwards;
+}
+
+/* Animasi Kertas Keluar */
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header Struk */
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #27272a;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.receipt-pill-title {
+  background: #6b21a8;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 20px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.receipt-date {
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #52525b;
+}
+
+/* Tabel Struk */
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.receipt-table th {
+  border-bottom: 2px solid #27272a;
+  padding: 8px 4px;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #18181b;
+}
+
+.receipt-table td {
+  padding: 10px 4px;
+  border-bottom: 1px dashed #e4e4e7;
+}
+
+.col-qty {
+  width: 10%;
+  font-weight: 700;
+}
+
+.col-desc {
+  width: 65%;
+}
+
+.col-total {
+  width: 25%;
+  text-align: right;
+  font-weight: 700;
+  color: #6b21a8;
+}
+
+/* Footer Struk & Stempel */
+.receipt-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 2px solid #27272a;
+}
+
+/* Stempel "Selected Developer" */
+.selected-stamp {
+  border: 2px solid #6b21a8;
+  color: #6b21a8;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-4deg);
+  font-size: 10px;
+}
+
+.selected-stamp strong {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.big-total-code {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 10px;
+  color: #71717a;
+}
+
+.grand-number {
+  font-size: 28px;
+  color: #18181b;
+  line-height: 1;
+}
+
+/* Tanda Tangan */
+.receipt-signature {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #71717a;
+}
+
+.script-sign {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  color: #6b21a8;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Gerigi Atas Bawah Kertas */
+.receipt-zigzag-top,
+.receipt-zigzag-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-size: 12px 8px;
+}
+
+.receipt-zigzag-bottom {
+  bottom: -8px;
+  background-image: linear-gradient(135deg, #fefefe 50%, transparent 50%),
+                    linear-gradient(225deg, #fefefe 50%, transparent 50%);
+}
