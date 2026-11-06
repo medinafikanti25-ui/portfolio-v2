@@ -52,15 +52,18 @@ const projectsData: Project[] = [
   },
   {
     id: '3',
-    tagNo: 'PRJ-2026-DMN03',
-    title: 'Lung Cancer Analytics',
-    category: 'Data Mining',
+    tagNo: 'PRJ-2026-BI03',
+    title: 'Credit Portfolio Analysis',
+    category: 'Data Analytics',
     projectType: 'MINI PROJECT',
     description:
-      'Data classification and accuracy evaluation using Confusion Matrix analysis on medical lung cancer datasets to predict patient risk levels.',
-    techStack: ['Python', 'Pandas', 'Scikit-learn', 'Confusion Matrix'],
-    githubUrl: '#',
-    date: 'MAR 2026',
+      'Interactive Power BI dashboard analyzing credit risk across 10,000 loan records. Covers loan purpose, term, home ownership, credit score, and income, with a credit problem rate analysis to identify the highest-risk segments.',
+    techStack: ['Power BI', 'DAX', 'Data Visualization', 'Credit Risk'],
+    demoUrl:
+      'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi/blob/main/Credit%20Portfolio%20Analysis.pdf',
+    githubUrl:
+      'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi',
+    date: 'NOV 2026',
   },
 ];
 

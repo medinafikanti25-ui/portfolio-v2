@@ -28,11 +28,7 @@ export const AboutMe: React.FC = () => {
               <div className="photo-card">
                 <div className="photo-badge">INFORMATICS ENGINEER</div>
                 <div className="photo-frame">
-                  <img
-                    src="/foto-profile.jpg"
-                    alt="Medina Fikanti"
-                    className="profile-img"
-                  />
+                  <img src="/foto-profile.jpg" alt="Medina Fikanti" className="profile-img" />
                 </div>
                 <div className="photo-info">
                   <strong>Medina Fikanti</strong>
@@ -49,14 +45,11 @@ export const AboutMe: React.FC = () => {
               <h1 className="hero-title">
                 hi, I'm <span className="purple-text">Medina Fikanti</span>
               </h1>
-              <h2 className="hero-subtitle">
-                Informatics Engineering Student 
-              </h2>
+              <h2 className="hero-subtitle">Informatics Engineering Student</h2>
 
               <p className="bio-text">
-                I am an Informatics student with a strong passion for backend engineering. 
-                I enjoy building reliable server-side applications, designing REST APIs, and optimizing databases. 
-                Currently sharpening my skills in Node.js, MySQL, and modern backend tech.
+                I am an Informatics student passionate about data and software development. I enjoy building web applications, analyzing data, and turning numbers into clear, interactive dashboards. Currently sharpening my skills in Power
+                BI, SQL, Python, and modern web technologies.
               </p>
 
               {/* Grid Kampus & Fokus */}
@@ -70,7 +63,7 @@ export const AboutMe: React.FC = () => {
                 <div className="info-card">
                   <span className="card-tag">FOCUS</span>
                   <h3>Informatics Engineering</h3>
-                  <p>Backend Developer</p>
+                  <p>Data Analyst</p>
                 </div>
               </div>
 
@@ -81,11 +74,11 @@ export const AboutMe: React.FC = () => {
                   <span className="handwriting-sub">// my daily driver</span>
                 </div>
                 <div className="tech-list">
-                  <span>• Node.js</span>
-                  <span>• REST API</span>
-                  <span>• Web Administration</span>
+                  <span>• Power BI</span>
+                  <span>• Python</span>
+                  <span>• Data Visualization</span>
                   <span>• Git</span>
-                  <span>• MySQL</span>
+                  <span>• SQL</span>
                 </div>
               </div>
 
@@ -97,12 +90,7 @@ export const AboutMe: React.FC = () => {
                 <a href="#contact" className="btn-outline-gray">
                   Contact Me
                 </a>
-                <a
-                  href="/CV-Medina.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline-gray"
-                >
+                <a href="/CV-Medina.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline-gray">
                   Resume
                 </a>
               </div>
