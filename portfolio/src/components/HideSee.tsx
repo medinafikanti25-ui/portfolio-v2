@@ -25,30 +25,21 @@ const projectsData: Project[] = [
     projectType: 'REAL PROJECT',
     description:
       'A comprehensive campus information system designed to help prospective engineering students find and explore private and public universities in Indonesia with ease. It features detailed campus profiles, programs, and comparisons.',
-    techStack: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'Vercel',
-      'Prisma',
-      'MongoDB',
-    ],
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel', 'Prisma', 'MongoDB'],
     demoUrl: 'https://kampusfind.vercel.app/',
     githubUrl: 'https://github.com/medinafikanti/kampusfind.git',
     date: 'AUG 2026',
   },
   {
     id: '2',
-    tagNo: 'PRJ-2026-NET02',
-    title: 'Cisco Router Simulation',
-    category: 'Network Engineering',
+    tagNo: 'PRJ-2026-DA02',
+    title: 'BRImo Reviews Sentiment Dashboard',
+    category: 'Data Analytics',
     projectType: 'MINI PROJECT',
-    description:
-      'Simulated multi-router network layout configured with DHCP, DNS, and HTTP services using Cisco Packet Tracer to model a complete enterprise local network.',
-    techStack: ['Cisco Packet Tracer', 'DHCP', 'DNS', 'HTTP'],
-    demoUrl: '#',
-    date: 'JAN 2026',
+    description: 'Power BI dashboard analyzing 17,685 BRImo mobile banking reviews from Google Play and App Store, covering sentiment, rating trends, user complaints, key insights, and recommendations.',
+    techStack: ['Power BI', 'Power Query', 'DAX', 'Sentiment Analysis'],
+    demoUrl: 'https://github.com/medinafikanti25-ui/brimo-reviews-sentiment-dashboard',
+    date: 'NOV 2026',
   },
   {
     id: '3',
@@ -59,10 +50,8 @@ const projectsData: Project[] = [
     description:
       'Interactive Power BI dashboard analyzing credit risk across 10,000 loan records. Covers loan purpose, term, home ownership, credit score, and income, with a credit problem rate analysis to identify the highest-risk segments.',
     techStack: ['Power BI', 'DAX', 'Data Visualization', 'Credit Risk'],
-    demoUrl:
-      'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi/blob/main/Credit%20Portfolio%20Analysis.pdf',
-    githubUrl:
-      'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi',
+    demoUrl: 'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi/blob/main/Credit%20Portfolio%20Analysis.pdf',
+    githubUrl: 'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi',
     date: 'NOV 2026',
   },
 ];
@@ -70,14 +59,9 @@ const projectsData: Project[] = [
 type FilterCategory = 'SEMUA' | 'REAL PROJECT' | 'MINI PROJECT';
 
 export const HideSee: React.FC = () => {
-  const [activeCategory, setActiveCategory] =
-    useState<FilterCategory>('SEMUA');
+  const [activeCategory, setActiveCategory] = useState<FilterCategory>('SEMUA');
 
-  const categories: FilterCategory[] = [
-    'SEMUA',
-    'REAL PROJECT',
-    'MINI PROJECT',
-  ];
+  const categories: FilterCategory[] = ['SEMUA', 'REAL PROJECT', 'MINI PROJECT'];
 
   const filteredProjects = projectsData.filter((project) => {
     if (activeCategory === 'SEMUA') return true;
@@ -97,9 +81,7 @@ export const HideSee: React.FC = () => {
           <h2 className="section-title">
             <span className="highlight"> Hide n SEE</span>
           </h2>
-          <p className="section-subtitle">
-            [CART ITEMS]: Selected projects, experiments, and tech builds.
-          </p>
+          <p className="section-subtitle">[CART ITEMS]: Selected projects, experiments, and tech builds.</p>
 
           {/* Lines Separator Struk */}
           <div className="receipt-dash-line"></div>
@@ -109,11 +91,7 @@ export const HideSee: React.FC = () => {
             <span className="tabs-label">FILTER BY:</span>
             <div className="category-tabs">
               {categories.map((cat) => (
-                <button
-                  key={cat}
-                  className={`tab-btn ${activeCategory === cat ? 'active' : ''}`}
-                  onClick={() => setActiveCategory(cat)}
-                >
+                <button key={cat} className={`tab-btn ${activeCategory === cat ? 'active' : ''}`} onClick={() => setActiveCategory(cat)}>
                   [{cat}]
                 </button>
               ))}
@@ -162,22 +140,12 @@ export const HideSee: React.FC = () => {
 
               <div className="action-links">
                 {project.demoUrl && (
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-view"
-                  >
+                  <a href={project.demoUrl} target="_blank" rel="noreferrer" className="btn-view">
                     Live Demo &rsaquo;
                   </a>
                 )}
                 {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-code"
-                  >
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="btn-code">
                     GitHub Code
                   </a>
                 )}
