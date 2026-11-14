@@ -54,6 +54,19 @@ const projectsData: Project[] = [
     githubUrl: 'https://github.com/medinafikanti25-ui/credit-portfolio-analysis-powerbi',
     date: 'NOV 2026',
   },
+    {
+    id: '4',
+    tagNo: 'PRJ-2026-BI04',
+    title: 'Indonesia Monthly Inflation Dashboard 2025',
+    category: 'Data Analytics',
+    projectType: 'MINI PROJECT',
+    description:
+      'Interactive Power BI dashboard analyzing monthly food, beverage, and tobacco inflation (M-to-M, 2022=100) across 38 Indonesian provinces in 2025. Features KPI cards, monthly trend, cumulative inflation calculated with DAX, and a province ranking to highlight regional price pressure.',
+    techStack: ['Power BI', 'DAX', 'Data Visualization', 'Economic Analysis'],
+    demoUrl: 'https://github.com/medinafikanti25-ui/dashboard-inflasi-2025/blob/main/Inflasi%20Bulanan%20Tahun%202025.pdf',
+    githubUrl: 'https://github.com/medinafikanti25-ui/dashboard-inflasi-2025',
+    date: 'NOV 2026',
+  },
 ];
 
 type FilterCategory = 'SEMUA' | 'REAL PROJECT' | 'MINI PROJECT';
