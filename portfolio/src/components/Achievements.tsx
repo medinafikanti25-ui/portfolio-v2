@@ -98,6 +98,17 @@ const itemsData: Item[] = [
     dateOrYear: '7 Des 2025',
     link: 'https://mediasembilan.com/2025/12/07/manfaat-teknologi-dalam-dunia-kesehatan/',
   },
+    {
+    id: 'media-5',
+    code: 'MED-KP-01',
+    category: 'MEDIA',
+    badgeLabel: 'Media Massa',
+    title: 'Pengabdian kepada Masyarakat (PKM) Universitas Pamulang di SMP Muhammadiyah 44 Tangerang Selatan',
+    publisherOrOrg: 'kumparan',
+    description: 'Liputan kegiatan PKM Teknik Informatika UNPAM yang memperkenalkan SIABSEN, sistem absensi berbasis website dan kode QR untuk siswa dan guru SMP Muhammadiyah 44 Tangerang Selatan.',
+    dateOrYear: '13 Nov 2026',
+    link: 'https://kumparan.com/medina-fikanti/pengabdian-kepada-masyarakat-pkm-universitas-pamulang-di-smp-muhammadiyah-44-tangerang-selatan-28Ylb1pJrNI',
+  },
 ];
 
 export const Achievements: React.FC = () => {
