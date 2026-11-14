@@ -134,7 +134,10 @@
 }
 
 .mindset-card p {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 12px;
   color: #52525b;
   margin: 0;
@@ -167,7 +170,10 @@
 }
 
 .bio-text {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 14px;
   color: #3f3f46;
   line-height: 1.6;
@@ -201,7 +207,10 @@
 }
 
 .info-card p {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 11px;
   color: #71717a;
   margin: 0;
@@ -300,19 +309,7 @@
 .css-barcode {
   width: 240px;
   height: 38px;
-  background: repeating-linear-gradient(
-    90deg,
-    #18181b,
-    #18181b 2px,
-    transparent 2px,
-    transparent 4px,
-    #18181b 4px,
-    #18181b 7px,
-    transparent 7px,
-    transparent 8px,
-    #18181b 8px,
-    #18181b 11px
-  );
+  background: repeating-linear-gradient(90deg, #18181b, #18181b 2px, transparent 2px, transparent 4px, #18181b 4px, #18181b 7px, transparent 7px, transparent 8px, #18181b 8px, #18181b 11px);
 }
 
 .barcode-text {
@@ -338,5 +335,19 @@
 
   .css-barcode {
     width: 180px;
+  }
+
+  /* Override: paksa gaya kartu menang atas file CSS lain */
+  .aboutme-wrapper .receipt-paper {
+    background: #f6f1e7;
+    border: 2px solid #1a1325;
+    border-radius: 6px;
+    box-shadow: 8px 8px 0 #7c3aed;
+  }
+
+  @media (max-width: 850px) {
+    .aboutme-wrapper .receipt-paper {
+      box-shadow: 5px 5px 0 #7c3aed;
+    }
   }
 }
