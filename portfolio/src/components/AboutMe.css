@@ -12,13 +12,14 @@
 /* 2. Kertas Struk / Receipt Langsung */
 .receipt-paper {
   width: 100%;
-  background: #fefefe;
+  background: #f6f1e7;
   color: #18181b;
-  border-radius: 16px;
+  border: 2px solid #1a1325;
+  border-radius: 6px;
   font-family: 'Space Mono', monospace;
   padding: 36px 32px;
   box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 0 #7c3aed;
 }
 
 /* 3. Header Section */
@@ -44,7 +45,7 @@
 }
 
 .receipt-divider {
-  border-top: 2px dashed #d4d4d8;
+  border-top: 2px dashed #cfc6b0;
   margin: 16px 0 24px 0;
 }
 
@@ -63,9 +64,9 @@
 }
 
 .photo-card {
-  background: #f4f4f5;
-  border: 1px dashed #a1a1aa;
-  border-radius: 8px;
+  background: #efe8d8;
+  border: 1px dashed #a8a08c;
+  border-radius: 6px;
   padding: 16px;
   text-align: center;
 }
@@ -84,9 +85,9 @@
 .photo-frame {
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  border: 2px solid #e4e4e7;
+  border: 2px solid #1a1325;
   margin-bottom: 12px;
 }
 
@@ -117,9 +118,9 @@
 }
 
 .mindset-card {
-  background: #faf5ff;
-  border: 1px solid #e9d5ff;
-  border-radius: 8px;
+  background: #f3ebfb;
+  border: 1px solid #dcc8f2;
+  border-radius: 6px;
   padding: 14px;
 }
 
@@ -181,8 +182,8 @@
 }
 
 .info-card {
-  background: #f4f4f5;
-  border: 1px solid #e4e4e7;
+  background: #efe8d8;
+  border: 1px solid #d9d0bd;
   padding: 12px 14px;
   border-radius: 6px;
 }
@@ -208,10 +209,10 @@
 
 /* Tech Box */
 .tech-box {
-  background: #ffffff;
-  border: 1px solid #e4e4e7;
+  background: #fbf8f1;
+  border: 1px solid #d9d0bd;
   padding: 14px;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .tech-box-header {
@@ -261,7 +262,7 @@
 }
 
 .btn-outline-gray {
-  border: 1px solid #d4d4d8;
+  border: 1px solid #cfc6b0;
   color: #3f3f46;
   padding: 10px 18px;
   border-radius: 6px;
@@ -272,7 +273,7 @@
 }
 
 .btn-outline-gray:hover {
-  background: #f4f4f5;
+  background: #efe8d8;
   color: #09090b;
 }
 
@@ -332,6 +333,7 @@
 
   .receipt-paper {
     padding: 20px 16px;
+    box-shadow: 5px 5px 0 #7c3aed;
   }
 
   .css-barcode {

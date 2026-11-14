@@ -26,11 +26,11 @@ body {
     "Segoe UI",
     sans-serif;
 
-  background-color: #fcfbfb;
+  background-color: #130d22;
 
   background-image: radial-gradient(
     circle,
-    rgba(124, 58, 237, 0.28) 1.2px,
+    rgba(167, 139, 250, 0.22) 1.2px,
     transparent 1.2px
   );
 
