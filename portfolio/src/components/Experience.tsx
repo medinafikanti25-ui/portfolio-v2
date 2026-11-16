@@ -1,5 +1,4 @@
 import React from 'react';
-import './Experience.css';
 
 interface ExperienceItem {
   id: string;
@@ -37,61 +36,30 @@ const experiences: ExperienceItem[] = [
 
 export const Experience: React.FC = () => {
   return (
-    <div className="experience-wrapper">
-      {/* Outer Shell Ungu Tua */}
-      <div className="experience-outer-card">
-        <div className="canvas-header-pill">
-          <span>EXPERIENCE</span>
-        </div>
+    <div className="rc-section">
+      <div className="rc-divider" />
+      <div className="rc-sh">
+        <span className="rc-label">• SECTION 02</span>
+        <span>MY EXPERIENCE</span>
+      </div>
+      <p className="rc-sub">[PAGES]: Record of roles, internships, and organizational activities.</p>
 
-        {/* Inner Receipt/Struk Paper */}
-        <div className="receipt-paper">
-          {/* Header Struk */}
-          <div className="receipt-header">
-            <span className="section-label">• SECTION 02</span>
-            <h2 className="receipt-title">
-              MY <span className="highlight">EXPERIENCE</span>
-            </h2>
-            <p className="receipt-subtitle">
-              [PAGES]: Record of roles, internships, and organizational activities.
-            </p>
-          </div>
-
-          <div className="receipt-divider"></div>
-
-          {/* List Ringkasan Pengalaman */}
-          <div className="experience-list">
-            {experiences.map((exp) => (
-              <div key={exp.id} className="receipt-entry">
-                <div className="entry-header">
-                  <div className="role-group">
-                    <h3 className="exp-role">{exp.role}</h3>
-                    <span className="exp-org">@ {exp.organization}</span>
-                  </div>
-                  <div className="badge-group">
-                    <span className="type-badge">[{exp.type}]</span>
-                    <span className="period-badge">{exp.period}</span>
-                  </div>
-                </div>
-
-                <ul className="entry-details">
-                  {exp.description.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Footer Struk & Barcode */}
-          <div className="receipt-footer">
-            <div className="receipt-divider"></div>
-            <div className="barcode-wrapper">
-              <div className="css-barcode"></div>
-              <span className="barcode-text">EXP-LOG-VERIFIED-2026</span>
+      <div className="rc-cols">
+        {experiences.map((exp) => (
+          <div key={exp.id} className="rc-xp">
+            <div className="rc-xp-meta">
+              <span className="rc-purple">[{exp.type}]</span>
+              <span className="rc-mute">{exp.period}</span>
             </div>
+            <h3 className="rc-item-title">{exp.role}</h3>
+            <span className="rc-org">@ {exp.organization}</span>
+            <ul>
+              {exp.description.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
