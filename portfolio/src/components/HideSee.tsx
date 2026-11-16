@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './HideSee.css';
 
 type ProjectType = 'REAL PROJECT' | 'MINI PROJECT';
 
@@ -82,89 +81,68 @@ export const HideSee: React.FC = () => {
   });
 
   return (
-    <div className="hidesee-wrapper">
-      {/* Container Utama Penghubung Struk Header & Filter */}
-      <div className="receipt-header-banner">
-        <div className="receipt-header-content">
-          <div className="receipt-meta-top">
-            <span>RECEIPT #2026-LOG</span>
-            <span>MEDINA </span>
-          </div>
+    <div className="rc-section">
+      <div className="rc-divider" />
+      <div className="rc-sh">
+        <span className="rc-label">• SECTION 03</span>
+        <span>
+          RECEIPT #2026-LOG // HIDE N <b className="rc-see">SEE</b>
+        </span>
+      </div>
+      <p className="rc-sub">[CART ITEMS]: Selected projects, experiments, and tech builds.</p>
 
-          <h2 className="section-title">
-            <span className="highlight"> Hide n SEE</span>
-          </h2>
-          <p className="section-subtitle">[CART ITEMS]: Selected projects, experiments, and tech builds.</p>
-
-          {/* Lines Separator Struk */}
-          <div className="receipt-dash-line"></div>
-
-          {/* Filter Tabs Menyatu dalam Struk Top Banner */}
-          <div className="receipt-tabs-wrapper">
-            <span className="tabs-label">FILTER BY:</span>
-            <div className="category-tabs">
-              {categories.map((cat) => (
-                <button key={cat} className={`tab-btn ${activeCategory === cat ? 'active' : ''}`} onClick={() => setActiveCategory(cat)}>
-                  [{cat}]
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Bergerigi Bawah Struk (Perforated Edge) */}
-        <div className="receipt-zigzag-bottom"></div>
+      <div className="rc-fl">
+        <span className="rc-fl-label">FILTER BY:</span>
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            type="button"
+            aria-pressed={activeCategory === cat}
+            className={`rc-fl-btn ${activeCategory === cat ? 'active' : ''}`}
+            onClick={() => setActiveCategory(cat)}
+          >
+            [{cat}]
+          </button>
+        ))}
       </div>
 
-      {/* Grid Project Cards */}
-      <div className="projects-grid">
+      <div className="rc-items">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="project-slip-card">
-            <div className="tag-hole"></div>
-
-            <div className="slip-top-bar">
-              <span className="tag-number">{project.tagNo}</span>
-              <span className="stamp-status">COMPLETED</span>
+          <article key={project.id} className="rc-item">
+            <div className="rc-item-top">
+              <span className="rc-code">{project.tagNo}</span>
+              <span className="rc-mark">COMPLETED</span>
             </div>
+            <span className="rc-cat">{project.category}</span>
+            <h3 className="rc-item-title">{project.title}</h3>
+            <p className="rc-item-desc">{project.description}</p>
 
-            <div className="slip-body">
-              <span className="project-cat">{project.category}</span>
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-desc">{project.description}</p>
-
-              <div className="tech-pills">
-                {project.techStack.map((tech, index) => (
-                  <span key={index} className="tech-pill">
-                    #{tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="slip-divider"></div>
-
-            <div className="slip-footer">
-              <div className="barcode-box">
-                <div className="barcode-lines"></div>
-                <span>
-                  ITEM #{project.id} • {project.date}
+            <div className="rc-tags">
+              {project.techStack.map((tech, index) => (
+                <span key={index} className="rc-tag small">
+                  #{tech}
                 </span>
-              </div>
+              ))}
+            </div>
 
-              <div className="action-links">
+            <div className="rc-item-foot">
+              <span className="rc-mute">
+                ITEM #{project.id} • {project.date}
+              </span>
+              <div className="rc-links">
                 {project.demoUrl && (
-                  <a href={project.demoUrl} target="_blank" rel="noreferrer" className="btn-view">
+                  <a href={project.demoUrl} target="_blank" rel="noreferrer" className="rc-btn primary sm">
                     Live Demo &rsaquo;
                   </a>
                 )}
                 {project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="btn-code">
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="rc-btn sm">
                     GitHub Code
                   </a>
                 )}
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

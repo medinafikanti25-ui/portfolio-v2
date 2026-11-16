@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Achievements.css';
 
 type CategoryType = 'SEMUA' | 'DJKI' | 'JURNAL' | 'MEDIA';
 
@@ -111,6 +110,13 @@ const itemsData: Item[] = [
   },
 ];
 
+const filters: { value: CategoryType; label: string }[] = [
+  { value: 'SEMUA', label: '[SEMUA]' },
+  { value: 'DJKI', label: '[DJKI / HKI]' },
+  { value: 'JURNAL', label: '[JURNAL ILMIAH]' },
+  { value: 'MEDIA', label: '[MEDIA MASSA]' },
+];
+
 export const Achievements: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<CategoryType>('SEMUA');
 
@@ -120,91 +126,50 @@ export const Achievements: React.FC = () => {
   });
 
   return (
-    <div className="achievements-wrapper" id="achievements">
-      <div className="receipt-container">
-        {/* Header Struk */}
-        <div className="receipt-top-info">
-          <span className="receipt-code">RECEIPT #2026-ACH</span>
-          <span className="receipt-owner">MEDINA</span>
-        </div>
+    <div className="rc-section">
+      <div className="rc-divider" />
+      <div className="rc-sh">
+        <span className="rc-label">• SECTION 04</span>
+        <span>RECEIPT #2026-ACH // HONORS &amp; PUBLICATIONS</span>
+      </div>
+      <p className="rc-sub">[RECORDS]: Selected IP registrations, journal articles, and press publications.</p>
 
-        <div className="receipt-title-wrapper">
-          <h2 className="receipt-big-title">
-            <span className="title-gray">HONORS &amp;</span> <span className="title-purple">PUBLICATIONS</span>
-          </h2>
-          <p className="receipt-subtitle">
-            [RECORDS]: Selected IP registrations, journal articles, and press publications.
-          </p>
-        </div>
+      <div className="rc-fl">
+        <span className="rc-fl-label">FILTER BY:</span>
+        {filters.map((f) => (
+          <button
+            key={f.value}
+            type="button"
+            aria-pressed={activeFilter === f.value}
+            className={`rc-fl-btn ${activeFilter === f.value ? 'active' : ''}`}
+            onClick={() => setActiveFilter(f.value)}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
 
-        <div className="receipt-dashed-line"></div>
-
-        {/* Filter Bar */}
-        <div className="receipt-filter-bar">
-          <span className="filter-label">FILTER BY:</span>
-          <div className="filter-buttons">
-            <button
-              className={`filter-btn ${activeFilter === 'SEMUA' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('SEMUA')}
-            >
-              [SEMUA]
-            </button>
-            <button
-              className={`filter-btn ${activeFilter === 'DJKI' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('DJKI')}
-            >
-              [DJKI / HKI]
-            </button>
-            <button
-              className={`filter-btn ${activeFilter === 'JURNAL' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('JURNAL')}
-            >
-              [JURNAL ILMIAH]
-            </button>
-            <button
-              className={`filter-btn ${activeFilter === 'MEDIA' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('MEDIA')}
-            >
-              [MEDIA MASSA]
-            </button>
-          </div>
-        </div>
-
-        <div className="receipt-dashed-line"></div>
-
-        {/* Cards Grid Standard */}
-        <div className="cards-grid">
-          {filteredItems.map((item) => (
-            <div key={item.id} className="receipt-item-card">
-              <div className="card-top-bar">
-                <span className="item-code">{item.code}</span>
-                <span className="type-badge">[{item.badgeLabel}]</span>
-              </div>
-
-              <div className="card-body">
-                <h3 className="item-title">{item.title}</h3>
-                <span className="publisher-tag">@ {item.publisherOrOrg}</span>
-                {item.description && <p className="item-desc">{item.description}</p>}
-              </div>
-
-              <div className="card-footer-bar">
-                <span className="item-date">{item.dateOrYear}</span>
-                {item.link && (
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="receipt-action-btn"
-                  >
-                    VIEW &rsaquo;
-                  </a>
-                )}
-              </div>
-
-              <div className="card-barcode-strip"></div>
+      <div className="rc-items">
+        {filteredItems.map((item) => (
+          <article key={item.id} className="rc-item">
+            <div className="rc-item-top">
+              <span className="rc-code">{item.code}</span>
+              <span className="rc-purple rc-badge-txt">[{item.badgeLabel}]</span>
             </div>
-          ))}
-        </div>
+            <h3 className="rc-item-title">{item.title}</h3>
+            <span className="rc-org">@ {item.publisherOrOrg}</span>
+            {item.description && <p className="rc-item-desc">{item.description}</p>}
+
+            <div className="rc-item-foot">
+              <span className="rc-mute">{item.dateOrYear}</span>
+              {item.link && (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="rc-btn primary sm">
+                  VIEW &rsaquo;
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   );

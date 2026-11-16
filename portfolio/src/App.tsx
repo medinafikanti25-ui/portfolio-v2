@@ -5,17 +5,17 @@ import Experience from './components/Experience';
 import HideSee from './components/HideSee';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
-import Footer from './components/Footer'; // 1. Import Footer di sini
+import Footer from './components/Footer';
 
 import './App.css';
+import './receipt.css';
 
 function App() {
   return (
     <div
       style={{
         backgroundColor: '#0f0f12',
-        backgroundImage:
-          'radial-gradient(circle, #3a3150 1px, transparent 1px)',
+        backgroundImage: 'radial-gradient(circle, #3a3150 1px, transparent 1px)',
         backgroundSize: '22px 22px',
         minHeight: '100vh',
         overflowX: 'hidden',
@@ -34,43 +34,42 @@ function App() {
       </div>
 
       <main style={{ width: '100%' }}>
-        {/* Section Home */}
-        <section id="home" style={{ paddingTop: '20px' }}>
-          <HeroHome />
-        </section>
+        {/* Satu gulungan struk yang keluar dari printer */}
+        <div className="rc-page">
+          <div className="rc-printer">
+            <small>MF-2026 / THERMAL PRINTER</small>
+            <i className="rc-led" />
+            <div className="rc-slot" />
+          </div>
 
-        {/* Section About Me */}
-        <section id="about" style={{ marginTop: '40px' }}>
-          <AboutMe />
-        </section>
+          <div className="rc-paper">
+            <section id="home">
+              <HeroHome />
+            </section>
 
-        {/* Section Experience */}
-        <section id="experience" style={{ marginTop: '50px' }}>
-          <Experience />
-        </section>
+            <section id="about">
+              <AboutMe />
+            </section>
 
-        {/* Section Hide n SEE (Projects) */}
-        <section id="hide-see" style={{ marginTop: '60px' }}>
-          <HideSee />
-        </section>
+            <section id="experience">
+              <Experience />
+            </section>
 
-        {/* Section Achievements & Publications */}
-        <section id="achievements" style={{ marginTop: '60px' }}>
-          <Achievements />
-        </section>
+            <section id="hide-see">
+              <HideSee />
+            </section>
 
-        {/* Section Contact */}
-        <section
-          id="contact"
-          style={{
-            marginTop: '60px',
-            paddingBottom: '20px',
-          }}
-        >
-          <Contact />
-        </section>
+            <section id="achievements">
+              <Achievements />
+            </section>
 
-        {/* 2. Tambahkan Footer di paling bawah */}
+            <section id="contact">
+              <Contact />
+            </section>
+          </div>
+          <div className="rc-tear" />
+        </div>
+
         <Footer />
       </main>
     </div>

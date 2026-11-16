@@ -1,113 +1,58 @@
 import React from 'react';
-import './AboutMe.css';
 
 export const AboutMe: React.FC = () => {
   return (
-    <div className="aboutme-wrapper">
-      {/* Outer Shell Ungu Tua */}
-      <div className="aboutme-outer-card">
-        {/* Banner Atas Canvas */}
-        <div className="canvas-header-pill">
-          <span>INTRODUCTION & PROFILE</span>
+    <div className="rc-section">
+      <div className="rc-divider" />
+      <div className="rc-sh">
+        <span className="rc-label">• SECTION 01</span>
+        <span>STATEMENT #01 // HELLO WORLD!</span>
+      </div>
+
+      <div className="rc-about">
+        <div className="rc-photo">
+          <span className="rc-badge">INFORMATICS ENGINEER</span>
+          <div className="rc-photo-frame">
+            <img src="/foto-profile.jpg" alt="Medina Fikanti" />
+          </div>
+          <strong>Medina Fikanti</strong>
+          <span className="rc-mute">Informatics Student</span>
+          <span className="rc-active">• Active Student</span>
         </div>
 
-        {/* Kertas Struk / Receipt Paper */}
-        <div className="receipt-paper">
-          {/* Header Struk */}
-          <div className="receipt-header">
-            <span className="section-label">• SECTION 01</span>
-            <span className="receipt-title-code">STATEMENT #01 // HELLO WORLD!</span>
+        <div className="rc-about-body">
+          <h2 className="rc-title">
+            hi, I'm <span className="rc-purple">Medina Fikanti</span>
+          </h2>
+          <h3 className="rc-subtitle">Informatics Engineering Student</h3>
+
+          <p className="rc-bio">
+            I am an Informatics student passionate about data and software development. I enjoy building web
+            applications, analyzing data, and turning numbers into clear, interactive dashboards. Currently
+            sharpening my skills in Power BI, SQL, Python, and modern web technologies.
+          </p>
+
+          <div className="rc-lines">
+            <div className="rc-ln"><span>UNIVERSITY</span><i /><b>Pamulang University</b></div>
+            <div className="rc-ln"><span>MAJOR</span><i /><b>Informatics Engineering</b></div>
+            <div className="rc-ln"><span>FOCUS</span><i /><b>Data Analyst</b></div>
           </div>
 
-          <div className="receipt-divider"></div>
-
-          {/* Grid Utama (Kiri & Kanan) */}
-          <div className="receipt-body-grid">
-            {/* Kolom Kiri: Foto & Mindset */}
-            <div className="left-column">
-              <div className="photo-card">
-                <div className="photo-badge">INFORMATICS ENGINEER</div>
-                <div className="photo-frame">
-                  <img src="/foto-profile.jpg" alt="Medina Fikanti" className="profile-img" />
-                </div>
-                <div className="photo-info">
-                  <strong>Medina Fikanti</strong>
-                  <div className="status-row">
-                    <span>Informatics Student</span>
-                    <span className="active-badge">• Active Student</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Kolom Kanan: Info Bio & Tech */}
-            <div className="right-column">
-              <h1 className="hero-title">
-                hi, I'm <span className="purple-text">Medina Fikanti</span>
-              </h1>
-              <h2 className="hero-subtitle">Informatics Engineering Student</h2>
-
-              <p className="bio-text">
-                I am an Informatics student passionate about data and software development. I enjoy building web applications, analyzing data, and turning numbers into clear, interactive dashboards. Currently sharpening my skills in Power
-                BI, SQL, Python, and modern web technologies.
-              </p>
-
-              {/* Grid Kampus & Fokus */}
-              <div className="info-boxes-grid">
-                <div className="info-card">
-                  <span className="card-tag">UNIVERSITY</span>
-                  <h3>Pamulang University</h3>
-                  <p>Undergraduate Informatics Engineering Student</p>
-                </div>
-
-                <div className="info-card">
-                  <span className="card-tag">FOCUS</span>
-                  <h3>Informatics Engineering</h3>
-                  <p>Data Analyst</p>
-                </div>
-              </div>
-
-              {/* Core Tech Box */}
-              <div className="tech-box">
-                <div className="tech-box-header">
-                  <span>CORE TECHNOLOGIES & TOOLS</span>
-                  <span className="handwriting-sub">// my daily driver</span>
-                </div>
-                <div className="tech-list">
-                  <span>• Power BI</span>
-                  <span>• Python</span>
-                  <span>• Data Visualization</span>
-                  <span>• Git</span>
-                  <span>• SQL</span>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="button-group">
-                <a href="#hide-see" className="btn-solid-purple">
-                  View Projects & Works &rsaquo;
-                </a>
-                <a href="#contact" className="btn-outline-gray">
-                  Contact Me
-                </a>
-                <a href="/CV-Medina.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline-gray">
-                  Resume
-                </a>
-              </div>
+          <div className="rc-tech">
+            <span className="rc-mute">CORE TECHNOLOGIES &amp; TOOLS // my daily driver</span>
+            <div className="rc-tags">
+              <span className="rc-tag">Power BI</span>
+              <span className="rc-tag">Python</span>
+              <span className="rc-tag">Data Visualization</span>
+              <span className="rc-tag">Git</span>
+              <span className="rc-tag">SQL</span>
             </div>
           </div>
 
-          {/* Footer Struk + Barcode */}
-          <div className="receipt-footer">
-            <div className="receipt-divider"></div>
-            <div className="footer-info">
-              <span>Designed with passion & engineered with precision</span>
-              <strong>Medina Fikanti</strong>
-            </div>
-            <div className="barcode-wrapper">
-              <div className="css-barcode"></div>
-              <span className="barcode-text">PROFILE-VERIFIED-2026</span>
-            </div>
+          <div className="rc-actions">
+            <a href="#hide-see" className="rc-btn primary">View Projects &amp; Works &rsaquo;</a>
+            <a href="#contact" className="rc-btn">Contact Me</a>
+            <a href="/CV-Medina.pdf" target="_blank" rel="noopener noreferrer" className="rc-btn">Resume</a>
           </div>
         </div>
       </div>

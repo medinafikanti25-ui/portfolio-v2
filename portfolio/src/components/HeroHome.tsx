@@ -1,78 +1,55 @@
 import React from 'react';
-import './HeroHome.css';
 
 export const HeroHome: React.FC = () => {
   return (
-    <div className="hero-receipt-wrapper">
-      {/* Mesin Printer / Slot Mesin */}
-      <div className="printer-machine">
-        <div className="printer-slot"></div>
+    <div className="rc-hero">
+      <div className="rc-hero-head">
+        <span className="rc-pill">welcome!</span>
+        <div className="rc-date">
+          <span>Date:</span>
+          <strong>{new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</strong>
+        </div>
       </div>
 
-      {/* Kertas Struk Keluar */}
-      <div className="receipt-paper">
-        {/* Ring Gerigi / Lubang Struk Atas */}
-        <div className="receipt-zigzag-top"></div>
+      <h1 className="rc-name">MEDINA FIKANTI</h1>
+      <p className="rc-role">DATA ANALYST / INFORMATICS ENGINEERING</p>
 
-        <div className="receipt-content">
-          {/* Badge Header Struk */}
-          <div className="receipt-header">
-            <span className="receipt-pill-title">welcome!</span>
-            <div className="receipt-date">
-              <span>Date:</span>
-              <strong>{new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</strong>
-            </div>
-          </div>
+      <table className="rc-table">
+        <thead>
+          <tr>
+            <th className="rc-qty">Qty</th>
+            <th>Description</th>
+            <th className="rc-total">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="rc-qty">1x</td>
+            <td>Informatics Student</td>
+            <td className="rc-total">100%</td>
+          </tr>
+          <tr>
+            <td className="rc-qty">1x</td>
+            <td>Web Development &amp; Tech Log</td>
+            <td className="rc-total">PASSION</td>
+          </tr>
+          <tr>
+            <td className="rc-qty">1x</td>
+            <td>Creative Portfolio Access</td>
+            <td className="rc-total">FREE</td>
+          </tr>
+        </tbody>
+      </table>
 
-          {/* Tabel Struk */}
-          <table className="receipt-table">
-            <thead>
-              <tr>
-                <th className="col-qty">Qty</th>
-                <th className="col-desc">Description</th>
-                <th className="col-total">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="col-qty">1x</td>
-                <td className="col-desc">Informatics Student</td>
-                <td className="col-total">100%</td>
-              </tr>
-              <tr>
-                <td className="col-qty">1x</td>
-                <td className="col-desc">Web Development & Tech Log</td>
-                <td className="col-total">PASSION</td>
-              </tr>
-              <tr>
-                <td className="col-qty">1x</td>
-                <td className="col-desc">Creative Portfolio Access</td>
-                <td className="col-total">FREE</td>
-              </tr>
-            </tbody>
-          </table>
-
-          {/* Footer Struk */}
-          <div className="receipt-footer">
-            <div className="selected-stamp">
-              <span>Selected</span>
-              <strong>DEVELOPER</strong>
-            </div>
-            <div className="big-total-code">
-              <span>Item Count</span>
-              <strong className="grand-number">03</strong>
-            </div>
-          </div>
-
-          {/* Stempel / Tanda Tangan Latin */}
-          <div className="receipt-signature">
-            <p>Thank you for visiting!</p>
-            <span className="script-sign">Medina Fikanti</span>
-          </div>
+      <div className="rc-hero-foot">
+        <div className="rc-stamp">
+          <span>Selected</span>
+          <strong>DEVELOPER</strong>
         </div>
-
-        {/* Gerigi Bawah Kertas */}
-        <div className="receipt-zigzag-bottom"></div>
+        <div className="rc-count">
+          <span>Item Count</span>
+          <strong>03</strong>
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const navItems: NavItem[] = [
   { label: 'About Me', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Hide n SEE', href: '#hide-see', isSpecial: true },
-  { label: 'Achievment', href: '#achievements' },
+  { label: 'Achievement', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
 
